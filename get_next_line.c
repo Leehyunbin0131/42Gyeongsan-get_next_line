@@ -6,7 +6,7 @@
 /*   By: hyunlee <hyunlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 14:40:52 by hyunlee           #+#    #+#             */
-/*   Updated: 2026/05/12 23:35:20 by hyunlee          ###   ########.fr       */
+/*   Updated: 2026/05/12 23:51:10 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ static char	*ft_substr(char const *s, unsigned int start, size_t len)
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
-	maxlen = (len > slen - start) ? (slen - start) : len;
+	if (len > slen - start)
+		maxlen = slen - start;
+	else
+		maxlen = len;
 	arr = (char *)malloc((maxlen + 1) * sizeof(char));
 	if (arr == NULL)
 		return (NULL);

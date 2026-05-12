@@ -6,13 +6,11 @@
 /*   By: hyunlee <hyunlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 14:40:52 by hyunlee           #+#    #+#             */
-/*   Updated: 2026/05/12 16:51:32 by hyunlee          ###   ########.fr       */
+/*   Updated: 2026/05/12 23:31:17 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-char	*ft_strjoin(char *s1, char *s2);
 
 static int	fill_until_nl_or_eof(int fd, char **backup)
 {
@@ -31,7 +29,7 @@ static int	fill_until_nl_or_eof(int fd, char **backup)
 		}
 		buf[buf_len] = '\0';
 		temp = *backup;
-		*backup = ft_strjoin(*backup, buf);
+		*backup = my_strjoin(*backup, buf);
 		free(temp);
 		if (ft_strchr(*backup, '\n') || buf_len == 0)
 			break ;

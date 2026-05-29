@@ -6,7 +6,7 @@
 /*   By: hyunlee <hyunlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 14:40:11 by hyunlee           #+#    #+#             */
-/*   Updated: 2026/05/12 23:35:45 by hyunlee          ###   ########.fr       */
+/*   Updated: 2026/05/14 01:36:14 by hyunlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-char	*get_next_line(int fd);
+char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-char	*ft_strdup(const char *s1);
-char	*ft_strchr(const char *s, int c);
+char	*ft_substr(char *s, unsigned int start, size_t len);
+char	*get_next_line(int fd);
 
 #endif

@@ -56,8 +56,18 @@ int	main(void)
 }
 ```
 
-## Resources
-- Linux manual pages: `man 2 read`, `man 3 malloc`, `man 3 free`
-- My Notion study notes: https://coconut-munchkin-952.notion.site/2026_42gs-79872d44d901462c8b583fa5b48e7f03
+## Resources & AI Usage
 
-AI assistance was used during the learning and debugging process. Google's Gemini model was used to study static variables, discuss memory ownership, and analyze segmentation faults or leaks without generating or copy-pasting the implementation code.
+### References
+
+* [Linux Programmer's Manual (man 2 read)](https://man7.org/linux/man-pages/man2/read.2.html)
+* [C Static Variables Explained](https://en.wikipedia.org/wiki/Static_variable)
+* 42 C Piscine & Core Curriculum Documentation
+* My Notion study notes: https://coconut-munchkin-952.notion.site/2026_42gs-79872d44d901462c8b583fa5b48e7f03
+
+### AI Usage Declaration
+
+During the development of this project, an AI assistant (Gemini) was used strictly as a **conversational tutor**.
+
+* **What it was used for:** To understand deep memory allocation concepts, identify the logical causes of Segmentation Faults and memory leaks (e.g., dangling pointers during `ft_substr`), and discuss architectural strategies for modularizing code to meet Norminette constraints.
+* **What it was NOT used for:** AI was never used to generate the final code, bypass the learning process, or write the actual logic. All code implementations, debugging, and final solutions were written manually.
